@@ -18,6 +18,22 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+.pos-fixed {
+    position: fixed;
+}
+.nav-bar{
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    justify-content: left;
+    padding: 2px 0px;
+}
+.nav-bar > a{
+    text-decoration:underline;
+    color: white;
+}
+.nav-bar > a:hover{
+    font-weight: bold;
+}
 .bg-black{
     background: #000;
 }
