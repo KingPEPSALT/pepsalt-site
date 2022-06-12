@@ -75,3 +75,27 @@ html::-webkit-scrollbar {
 .text-white {
     color: #FFF
 }
+
+.header-text-scale {
+    font-size: 5vw;    
+}
+.subheader-text-scale{
+    font-size: 2.5vw;
+}
+@media screen and (min-width: 1500px) {
+    .header-text-scale {
+        font-size: 75px;
+    }
+    .subheader-text-scale {
+        font-size: 37.5px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .header-text-scale {
+        font-size: 45px;
+    }
+    .subheader-text-scale{
+        font-size: 22.5px;
+    }
+}
+
