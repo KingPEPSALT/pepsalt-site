@@ -21,6 +21,9 @@ html::-webkit-scrollbar {
 .bg-black{
     background: #000;
 }
+.bg-white{
+    background: #FFF;
+}
 .no-padding{ 
     padding: 0;
 }
@@ -37,6 +40,9 @@ html::-webkit-scrollbar {
     flex-direction: column;
 }
 
+.flex-row {
+    flex-direction: row;
+}
 
 .min-h-screen {
     min-height: 100vh;
@@ -74,6 +80,10 @@ html::-webkit-scrollbar {
 
 .text-white {
     color: #FFF
+}
+
+.text-black {
+    color: #000
 }
 
 .header-text-scale {
