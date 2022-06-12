@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Noto+Serif+JP&display=swap');
+html, body {
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+    
+}
+
+/* Hide scrollbar */
+html {
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar { 
+    display: none;
+}
+
+.bg-black{
+    background: #000;
+}
+.no-padding{ 
+    padding: 0;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col { 
+    flex-direction: column;
+}
+
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.max-h-screen {
+    max-height: 100vh;
+}
+
+.min-w-screen {
+    min-width: 100vw;
+}
+
+.max-w-screen {
+    max-width: 100vw;
+}
+
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+
+.font-header { 
+    font-family: 'Joan', serif;
+}
+
+.font-jp {
+    font-family: 'Noto Serif JP', serif;
+}
+
+.text-white {
+    color: #FFF
+}
