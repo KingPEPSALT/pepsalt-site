@@ -6,51 +6,19 @@ html, body {
     margin: 0;   
 }
 
-/* Hide scrollbar */
-html {
-    -ms-overflow-style: none; /* IE, Edge */
-    scrollbar-width: none; /* Firefox */
-    scroll-behavior: smooth;
-}
 
-/* Chrome, Safari, Opera */
-html::-webkit-scrollbar { 
-    display: none;
-}
-
-
-.no-text-select{
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
-}
-.cursor-pointer{
-    cursor: pointer;
-}
-
-.bolder-hover:hover{
-    font-weight:bold;
-    font-size:1.5rem;
-}
-
-.no-decoration{
-    text-decoration:none;
-}
-.pos-fixed {
-    position: fixed;
-}
+/* --- Navigation bar --- */
 .nav-bar{
-    font-family: 'Courier New', monospace;
     font-size: 1.2rem;
     justify-content: right;
     padding: 2px 0px;
     mix-blend-mode: difference;
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:430px){
     .nav-bar{
         justify-content: space-between;
+        font-size: 4.465vw;
     }
 }
 .nav-bar > span{
@@ -61,20 +29,41 @@ html::-webkit-scrollbar {
 .nav-bar > span:hover{
     font-weight: bold;
 }
+
+
+/* --- Table of contents --- */
+
+.table-contents-child {
+    list-style:lower-roman;
+}
+
+.table-contents-child > td {
+    padding: 5vh 8.5vw;
+    vertical-align: text-top;
+}
+
+
+/* == BACKGROUND == */
 .bg-black{
     background: #000000;
 }
 .bg-white{
     background: #FAFAFA;
 }
-.no-padding{ 
-    padding: 0;
+
+/* == SCROLLBAR == */
+html {
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
 }
 
-.no-margin{
-    margin: 0;
+html::-webkit-scrollbar { 
+    display: none; /* Chrome, Safari, Opera */
 }
 
+
+/* == FLEX == */
 .flex {
     display: flex;
 }
@@ -82,19 +71,16 @@ html::-webkit-scrollbar {
 .flex-col { 
     flex-direction: column;
 }
-
 .flex-row {
     flex-direction: row;
 }
 
-.min-h-screen {
-    min-height: 100vh;
+.justify-between{
+    justify-content: space-between;
 }
-
-.min-w-screen {
-    min-width: 100vw;
+.justify-around {
+    justify-content:space-around;
 }
-
 .justify-center {
     justify-content: center;
 }
@@ -103,29 +89,59 @@ html::-webkit-scrollbar {
     align-items: center;
 }
 
-.font-header { 
-    font-family: 'Joan', serif;
+
+/* == SIZINGS == */
+.min-h-screen {
+    min-height: 100vh;
+}
+.min-w-screen {
+    min-width: 100vw;
 }
 
-.font-jp {
-    font-family: 'Noto Serif JP', serif;
-}
-
-.text-white {
-    color: #FAFAFA
-}
 .w-100{
     width:100%;
 }
 .h-100{
     height:100%;  
 }
+
+
+/* == FONTS & TEXT == */
+.font-header { 
+    font-family: 'Joan', serif;
+}
+.font-jp {
+    font-family: 'Noto Serif JP', serif;
+}
+.font-bulk {
+    font-family: 'Times New Roman', Times, serif;
+}
+.font-courier{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.text-white {
+    color: #FAFAFA
+}
 .text-black {
     color: #000000
 }
 
+.text-center{
+    text-align: center;
+}
+.text-justify{
+    text-align: justify;
+}
+
 .header-text-scale {
     font-size: 5vw;    
+}
+.header-small-text-scale{
+    font-size: 3.75vw;
+}
+.subheader-big-text-scale{
+    font-size: 3.125vw;
 }
 .subheader-text-scale{
     font-size: 2.5vw;
@@ -133,6 +149,12 @@ html::-webkit-scrollbar {
 @media screen and (min-width: 1500px) {
     .header-text-scale {
         font-size: 75px;
+    }
+    .header-small-text-scale {
+        font-size: 56.25px;
+    }
+    .subheader-big-text-scale {
+        font-size: 46.875px;
     }
     .subheader-text-scale {
         font-size: 37.5px;
@@ -142,8 +164,50 @@ html::-webkit-scrollbar {
     .header-text-scale {
         font-size: 45px;
     }
+    .header-small-text-scale {
+        font-size: 33.75px;
+    }
+    .subheader-big-text-scale{
+        font-size: 28.125px;
+    }
     .subheader-text-scale{
         font-size: 22.5px;
     }
 }
 
+.no-decoration{
+    text-decoration:none;
+}
+.underline-text{
+    text-decoration: underline;
+}
+.bold-hover:hover{
+    font-weight:bold;
+}
+
+.no-text-select{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+
+/* == PADDING & MARGIN == */
+.no-padding{ 
+    padding: 0;
+}
+.no-margin{
+    margin: 0;
+}
+
+
+/* == POSITION == */
+.pos-fixed {
+    position: fixed;
+}
+
+/* == MISCELLANEOUS == */
+.cursor-pointer{
+    cursor: pointer;
+}
