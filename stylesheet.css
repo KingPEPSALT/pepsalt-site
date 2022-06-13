@@ -33,13 +33,12 @@ html, body {
 
 /* --- Table of contents --- */
 
-.table-contents-child {
-    list-style:lower-roman;
+.directory{
+    border: 1px solid black;
 }
-
-.table-contents-child > td {
-    padding: 6vh 8.5vw;
-    vertical-align: text-top;
+.dir-row > td{
+    padding:10px;
+    border: 1px solid black;
 }
 
 
