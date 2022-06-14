@@ -194,20 +194,12 @@ html::-webkit-scrollbar {
     color:blue;
     text-decoration: underline;
 }
-.max-link{
-    color: #ff66cc;
-    text-decoration: underline;
-}
 .faux-link:hover{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: blue;
     text-decoration-thickness: 2px;
 }
-.max-link:hover{
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ff66cc;
-    text-decoration-thickness: 2px;
-}
+
 .underline-text{
     text-decoration: underline;
 }
