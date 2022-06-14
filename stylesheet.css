@@ -32,15 +32,18 @@ html, body {
 
 
 /* --- Table of contents --- */
-
 .directory{
-    border: 1px solid black;
+    border: 2px solid black;
+    margin: 20px;
 }
 .dir-row > td{
     padding:10px;
     border: 1px solid black;
 }
-
+.dir-row > td:first-child{
+    min-width: 106px;
+    vertical-align: text-top;
+}
 
 /* == BACKGROUND == */
 .bg-black{
@@ -145,6 +148,9 @@ html::-webkit-scrollbar {
 .subheader-text-scale{
     font-size: 2.5vw;
 }
+.big-text-scale{
+    font-size: 1.666667vw;
+}
 @media screen and (min-width: 1500px) {
     .header-text-scale {
         font-size: 75px;
@@ -157,6 +163,9 @@ html::-webkit-scrollbar {
     }
     .subheader-text-scale {
         font-size: 37.5px;
+    }
+    .big-text-scale{
+        font-size: 25px;
     }
 }
 @media screen and (max-width: 900px) {
@@ -172,10 +181,32 @@ html::-webkit-scrollbar {
     .subheader-text-scale{
         font-size: 22.5px;
     }
+    .big-text-scale{
+        font-size: 15px;
+    }
 }
 
 .no-decoration{
     text-decoration:none;
+}
+
+.faux-link{
+    color:blue;
+    text-decoration: underline;
+}
+.max-link{
+    color: #ff66cc;
+    text-decoration: underline;
+}
+.faux-link:hover{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: blue;
+    text-decoration-thickness: 2px;
+}
+.max-link:hover{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ff66cc;
+    text-decoration-thickness: 2px;
 }
 .underline-text{
     text-decoration: underline;
