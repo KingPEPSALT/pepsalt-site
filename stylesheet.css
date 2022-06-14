@@ -33,12 +33,13 @@ html, body {
 
 /* --- Table of contents --- */
 .directory{
-    border: 2px solid black;
+    border: 2px solid #111;
+    border-spacing: 0;                  
     margin: 20px;
 }
 .dir-row > td{
     padding:10px;
-    border: 1px solid black;
+    border: 1px solid #111;
 }
 .dir-row > td:first-child{
     min-width: 106px;
@@ -47,12 +48,14 @@ html, body {
 
 /* == BACKGROUND == */
 .bg-black{
-    background: #000000;
+    background: #111;
 }
 .bg-white{
     background: #FAFAFA;
 }
-
+.bg-transparent{
+    background: transparent;
+}
 /* == SCROLLBAR == */
 html {
     -ms-overflow-style: none; /* IE, Edge */
@@ -126,7 +129,7 @@ html::-webkit-scrollbar {
     color: #FAFAFA
 }
 .text-black {
-    color: #000000
+    color: #111
 }
 
 .text-center{
@@ -208,7 +211,7 @@ html::-webkit-scrollbar {
 }
 .no-resize-bold-hover:hover{
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: #111;
 }
 .no-text-select{
     -webkit-user-select: none; /* Safari */        
