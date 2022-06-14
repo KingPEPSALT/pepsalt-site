@@ -183,7 +183,10 @@ html::-webkit-scrollbar {
 .bold-hover:hover{
     font-weight:bold;
 }
-
+.no-resize-bold-hover:hover{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
 .no-text-select{
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
