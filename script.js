@@ -32,33 +32,37 @@ homediv.addEventListener('mousemove', function(evt) {
 
 function Star(){
     this.r = Math.random()*5 + 5;
+    this.sr = 0;
+    this.growing = true;
     this.x = Math.random()*(starbg.width - this.r*2);
     this.y = Math.random()*(starbg.height- this.r*2);
 
-    this.dr = -1/(40-this.r);
+    this.dr = 1/(40-this.r);
 
     this.draw = function(){
         ctx.beginPath();
-        var grd = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
+        var grd = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.sr);
         grd.addColorStop(0, '#ffffff');
         grd.addColorStop(0.3,'#fafafa');
         grd.addColorStop(0.4,'#bbbbbb');
         grd.addColorStop(1, '#111');
         ctx.fillStyle = grd;
-        ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+        ctx.arc(this.x, this.y, this.sr, 0, Math.PI*2);
         ctx.fill();
     }
     this.animate = function(){
-        this.r += this.dr;
+        if(this.sr >= this.r) this.growing = false;
+        this.sr += (this.growing ? this.dr : -this.dr);
         dist = (this.x-mousePos.x)*(this.x-mousePos.x) + (this.y-mousePos.y)*(this.y-mousePos.y)
         this.x -= 100*(mousePos.x-this.x)/(dist)
         this.y -= 100*(mousePos.y-this.y)/(dist)
-        if (this.r <= 0) {
+        if (this.sr <= 0) {
             this.x = Math.random()*(starbg.width - this.r*2);
             this.y = Math.random()*(starbg.height- this.r*2);
             this.r = Math.random()*5 + 5;
-            this.dr = -1/(40-this.r);
-
+            this.sr = 0;
+            this.growing = true;
+            this.dr = 2/(40-this.r);
         }
         this.draw()
     }
