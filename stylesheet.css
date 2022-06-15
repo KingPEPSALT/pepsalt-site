@@ -7,7 +7,7 @@ html, body {
 }
 
 
-/* --- Navigation bar --- */
+/* --- Navigation bar ---
 .nav-bar{
     font-size: 1.2rem;
     justify-content: right;
@@ -28,13 +28,13 @@ html, body {
 }
 .nav-bar > span:hover{
     font-weight: bold;
-}
+} */
 
 
 /* --- Table of contents --- */
 .directory{
     border: 2px solid #111;
-    border-spacing: 0;                  
+    border-spacing: 10px;                  
     margin: 20px;
 }
 .dir-row > td{

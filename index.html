@@ -21,12 +21,6 @@
 </head>
 
 <body>
-    <div class="flex flex-row min-w-screen nav-bar bg-transparent text-white pos-fixed no-text-select font-courier">
-        |<span onclick="window.open('https://neocities.org/site/pepsalt')">neocities</span>
-        |<span onclick="window.open('https://open.spotify.com/user/osdt7ubnu5kvqzn663a8pwik9')">spotify</span>
-        |<span onclick="window.open('https://github.com/kingpepsalt')">github</span>
-        |<span onclick="window.open('https://discord.com/users/556523373522583555')">discord</span>|
-    </div>
     <div class="flex flex-col justify-center items-center bg-black min-h-screen no-text-select" style="gap: 18rem;">
         <div class="flex flex-col justify-center items-center" style="padding-top:13.5rem;">
             <h1 class="font-header text-white no-margin header-text-scale" style="letter-spacing:0.22em; padding-bottom:1.3rem;">pepsalt</h1>
@@ -37,25 +31,33 @@
     <div id="links" class="bg-white flex flex-col min-h-screen items-center">
         <h1 class="text-black header-text-scale font-header min-w-screen text-center underline-text" style="margin-bottom:4vh">directory</h1>
         <table class="directory">
-            <tr class="dir-row big-text-scale">
-                <td><span class="font-jp cursor-pointer faux-link" onclick="document.getElementById('about-me').scrollIntoView()">about me &#8595;</span></td>
-                <td class="font-jp">who am i? find out.</td>
+            <tr class="dir-row big-text-scale font-jp">
+                <td><span class="cursor-pointer faux-link" onclick="document.getElementById('about-me').scrollIntoView()">about me &#8595;</span></td>
+                <td>who am i? find out.</td>
             </tr>
-            <tr class="dir-row big-text-scale">
-                <td><span class="font-jp cursor-pointer faux-link" onclick="window.open('https://en.wikipedia.org/wiki/Blog')">blogs &#8599;</span></td>
-                <td class="font-jp">a blog covering many things, everything in fact.</td>
+            <tr class="dir-row big-text-scale font-jp">
+                <td><span class="cursor-pointer faux-link" onclick="window.open('https://en.wikipedia.org/wiki/Blog')">blogs &#8599;</span></td>
+                <td>a blog covering many things, everything in fact.</td>
             </tr>
-            <tr class="dir-row big-text-scale">
-                <td><span class="font-jp cursor-pointer faux-link" onclick="window.open('https://www.github.com/kingpepsalt')">projects &#8599;</span></td>
-                <td class="font-jp">stuff i've developed or helped develop, my portfolio.</td>
+            <tr class="dir-row big-text-scale font-jp">
+                <td><span class="cursor-pointer faux-link" onclick="window.open('https://www.github.com/kingpepsalt')">projects &#8599;</span></td>
+                <td>stuff i've developed or helped develop, my portfolio.</td>
             </tr>
-            <tr class="dir-row big-text-scale">
-                <td><span class="font-jp cursor-pointer faux-link" onclick="document.getElementById('contact-me').scrollIntoView()">contact me &#8595;</span></td>
-                <td class="font-jp">want to chat? want to commission me for some coding? find me here.</td>
+            <tr class="dir-row big-text-scale font-jp">
+                <td><span class="cursor-pointer faux-link">people &#8599;</span></td>
+                <td>people i find interesting, people worth talking to.</td>
             </tr>
-            <tr class="dir-row big-text-scale">
-                <td><span class="font-jp cursor-pointer faux-link">people &#8599;</span></td>
-                <td class="font-jp">people i find interesting, people worth talking to.</td>
+            <tr class="dir-row big-text-scale font-jp">
+                <td><span class="cursor-pointer faux-link">github &#8599;</span></td>
+                <td>want to see everything that i make? here.</td>
+            </tr>
+            <tr class="dir-row big-text-scale font-jp">
+                <td><span class="cursor-pointer faux-link">ideas &#8595;</span></td>
+                <td>a to do list of rough ideas i may want to do in the future.</td>
+            </tr>
+            <tr class="dir-row big-text-scale font-jp">
+                <td><span class="cursor-pointer faux-link" onclick="document.getElementById('contact-me').scrollIntoView()">contact me &#8595;</span></td>
+                <td>want to chat? want to commission me for some coding? find me here.</td>
             </tr>
         </table>
     </div>
