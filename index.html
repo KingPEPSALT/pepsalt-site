@@ -21,8 +21,9 @@
 </head>
 
 <body>
-    <div class="flex flex-col justify-center items-center bg-black min-h-screen no-text-select" style="gap: 18rem;">
-        <div class="flex flex-col justify-center items-center" style="padding-top:13.5rem;">
+    <canvas class="pos-absolute bg-black" id="star-bg" style="z-index:-9999"></canvas>
+    <div class="flex flex-col justify-center items-center bg-transparent min-h-screen no-text-select" style="gap: 18rem;">
+        <div class="flex flex-col justify-center items-center bg-black" style="padding-top:13.5rem;">
             <h1 class="font-header text-white no-margin header-text-scale" style="letter-spacing:0.22em; padding-bottom:1.3rem;">pepsalt</h1>
             <p class="font-jp text-white no-margin subheader-text-scale" style="line-height: 1.3em;">「 星にもまた始まりはあるが、<br>&ThickSpace;自らの力をもって滅び逝く。」</p>
         </div>
@@ -41,7 +42,7 @@
             </tr>
             <tr class="dir-row big-text-scale font-jp">
                 <td><span class="cursor-pointer faux-link" onclick="window.open('https://www.github.com/kingpepsalt')">projects &#8599;</span></td>
-                <td>stuff i've developed or helped develop, my portfolio.</td>
+                <td>selection of the stuff i've developed and like, my portfolio.</td>
             </tr>
             <tr class="dir-row big-text-scale font-jp">
                 <td><span class="cursor-pointer faux-link">people &#8599;</span></td>
@@ -49,17 +50,18 @@
             </tr>
             <tr class="dir-row big-text-scale font-jp">
                 <td><span class="cursor-pointer faux-link">github &#8599;</span></td>
-                <td>want to see everything that i make? here.</td>
+                <td>want to see everything that i make? go here.</td>
             </tr>
             <tr class="dir-row big-text-scale font-jp">
                 <td><span class="cursor-pointer faux-link">ideas &#8595;</span></td>
-                <td>a to do list of rough ideas i may want to do in the future.</td>
+                <td>a to-do list of rough ideas i may want to do in the future.</td>
             </tr>
             <tr class="dir-row big-text-scale font-jp">
                 <td><span class="cursor-pointer faux-link" onclick="document.getElementById('contact-me').scrollIntoView()">contact me &#8595;</span></td>
-                <td>want to chat? want to commission me for some coding? find me here.</td>
+                <td>want to talk to me directly? find me here.</td>
             </tr>
         </table>
+        <span class="text-black no-decoration cursor-pointer quote-hover font-jp" onclick="document.getElementById('about-me').scrollIntoView()" style="padding-top:10rem;font-size:3.2rem;"> &#10504; </span>  
     </div>
     <div class="bg-black text-white min-h-screen" id="about-me"></div>
     <div class="bg-white text-black min-h-screen" id="contact-me"></div>

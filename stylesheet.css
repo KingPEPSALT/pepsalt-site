@@ -234,6 +234,9 @@ html::-webkit-scrollbar {
 .pos-fixed {
     position: fixed;
 }
+.pos-absolute {
+    position: absolute;
+}
 
 /* == MISCELLANEOUS == */
 .cursor-pointer{
