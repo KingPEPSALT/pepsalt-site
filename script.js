@@ -50,12 +50,13 @@ function Star(){
         ctx.arc(this.x, this.y, this.sr, 0, Math.PI*2);
         ctx.fill();
     }
-    this.animate = function(){
+    this.animate = function(dt){
+        if(dt > 1000) dt = 200;
         if(this.sr >= this.r) this.growing = false;
-        this.sr += (this.growing ? this.dr : -this.dr);
+        this.sr += (this.growing ? this.dr : -this.dr)*dt/6;
         dist = (this.x-mousePos.x)*(this.x-mousePos.x) + (this.y-mousePos.y)*(this.y-mousePos.y)
-        this.x -= 100*(mousePos.x-this.x)/(dist)
-        this.y -= 100*(mousePos.y-this.y)/(dist)
+        this.x -= 20*(mousePos.x-this.x)/(dist)*dt
+        this.y -= 20*(mousePos.y-this.y)/(dist)*dt
         if (this.sr <= 0) {
             this.x = Math.random()*(starbg.width - this.r*2);
             this.y = Math.random()*(starbg.height- this.r*2);
@@ -72,7 +73,7 @@ let stars = [];
 for(i = 0; i<n; i++){
     stars.push(new Star())
 }
-
+var lastframe = Date.now();
 function update(){
     starbg.width = document.getElementById("home-div").clientWidth;
     starbg.height = document.getElementById("home-div").clientHeight;
@@ -92,9 +93,10 @@ function update(){
             stars.push(new Star())
             quota++;
         }
-        if(!deleted) stars[i].animate();
+        if(!deleted) stars[i].animate(Date.now()-lastframe);
         deleted = false;
     }
+    lastframe = Date.now();
     requestAnimationFrame(update)
 }
 update();
