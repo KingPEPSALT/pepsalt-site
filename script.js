@@ -67,7 +67,7 @@ function Star(){
         this.draw()
     }
 }
-var n = 60*((starbg.width*starbg.height)/(1920*1080))
+var n = Math.round(60*(Math.pow(starbg.width*starbg.height/(1920*1080), 0.7)))
 let stars = [];
 for(i = 0; i<n; i++){
     stars.push(new Star())
@@ -76,7 +76,7 @@ for(i = 0; i<n; i++){
 function update(){
     starbg.width = document.getElementById("home-div").clientWidth;
     starbg.height = document.getElementById("home-div").clientHeight;
-    n = 60*((starbg.width*starbg.height)/(1920*1080))
+    n = Math.round(60*(Math.pow(starbg.width*starbg.height/(1920*1080), 0.7)))
     ctx = starbg.getContext("2d");
     ctx.clearRect(0,0, starbg.width, starbg.height);
     let quota = stars.length - n;
