@@ -138,7 +138,6 @@ html::-webkit-scrollbar {
 .text-justify{
     text-align: justify;
 }
-
 .header-text-scale {
     font-size: 5vw;    
 }
@@ -241,4 +240,16 @@ html::-webkit-scrollbar {
 /* == MISCELLANEOUS == */
 .cursor-pointer{
     cursor: pointer;
+}
+#profile-image{
+    border:#FAFAFA double;
+    padding: 5px;
+    margin: 1vw;
+
+}
+@media screen and (max-width: 700px){
+    #profile-image{
+        text-align: center;
+        
+    }
 }

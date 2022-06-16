@@ -30,8 +30,8 @@
         </div>
         <span class="text-white no-decoration cursor-pointer quote-hover font-jp" onclick="document.getElementById('links').scrollIntoView()" style="font-size:3.2rem;"> &#10504; </span>  
     </div>
-    <div id="links" class="bg-white flex flex-col min-h-screen items-center">
-        <h1 class="text-black header-text-scale font-header min-w-screen text-center underline-text" style="margin-bottom:4vh">directory</h1>
+    <div id="links" class="bg-white flex flex-col min-h-screen items-center text-black">
+        <h1 class="header-text-scale font-header min-w-screen text-center underline-text" style="margin-bottom:4vh">directory</h1>
         <table class="directory">
             <tr class="dir-row big-text-scale font-jp">
                 <td><span class="cursor-pointer faux-link" onclick="document.getElementById('about-me').scrollIntoView()">about me &#8595;</span></td>
@@ -64,7 +64,14 @@
         </table>
         <span class="text-black no-decoration cursor-pointer quote-hover font-jp" onclick="document.getElementById('about-me').scrollIntoView()" style="padding-top:10rem;font-size:3.2rem;"> &#10504; </span>  
     </div>
-    <div class="bg-black text-white min-h-screen" id="about-me"></div>
-    <div class="bg-white text-black min-h-screen" id="contact-me"></div>
+    <div class="bg-black flex flex-col min-h-screen text-white" id="about-me">
+        <h1 class="font-header min-w-screen text-center header-text-scale underline-text">about me</h1>
+        <div class="subheader-text-scale font-header flex flex-row justify-around">
+            <img src="https://cdn.discordapp.com/avatars/556523373522583555/6e68d29ca4d2ac7adc22014189bacc01.png?size=512" width="256" height="256" alt="pepsalt's discord profile" id="profile-image">
+        </div>
+    </div>
+    <div class="bg-white flex flex-col min-h-screen items-center" id="contact-me">
+        <h1 class="font-header min-w-screen text-center header-text-scale underline-text">contact me</h1>
+    </div>
 </body>
 </html>

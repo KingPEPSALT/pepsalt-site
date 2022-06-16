@@ -67,18 +67,33 @@ function Star(){
         this.draw()
     }
 }
-const n = 40
+var n = 60*((starbg.width*starbg.height)/(1920*1080))
 let stars = [];
 for(i = 0; i<n; i++){
     stars.push(new Star())
 }
+
 function update(){
     starbg.width = document.getElementById("home-div").clientWidth;
     starbg.height = document.getElementById("home-div").clientHeight;
+    n = 60*((starbg.width*starbg.height)/(1920*1080))
     ctx = starbg.getContext("2d");
     ctx.clearRect(0,0, starbg.width, starbg.height);
-    for(let s of stars){
-        s.animate();
+    let quota = stars.length - n;
+    let deleted = false;
+    for(i = 0; i < stars.length; i++){
+        if(quota > 0){
+            if(stars[i].sr <= 0){ 
+                stars.splice(i, 1);
+                quota--;
+                deleted = true;
+            }
+        }else if(quota < 0){
+            stars.push(new Star())
+            quota++;
+        }
+        if(!deleted) stars[i].animate();
+        deleted = false;
     }
     requestAnimationFrame(update)
 }
